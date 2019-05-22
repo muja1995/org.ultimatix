@@ -1,14 +1,10 @@
 package Ultimatix_Def;
 
-import java.util.Set;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -41,28 +37,36 @@ public class Ultimatix_Def {
 
 		driver.findElement(By.id("password-btn")).click();
 		driver.findElement(By.id("password-login")).sendKeys("Password@16");
-		driver.findElement(By.xpath("//button[@id='form-submit']")).click();
+		
 	}
 
 	@When("^Sign on is clicked$")
-	public void sign_on_is_clicked() throws Throwable {
-		System.out.println("click successfull");
-		Thread.sleep(6000);
+	public void sign_on_is_clicked()  {
+		driver.findElement(By.xpath("//button[@id='form-submit']")).click();
+		//System.out.println("click successfull");
+		
 	}
 
 	@Then("^Dash board is displayed$")
 	public void dash_board_is_displayed() throws Throwable {
 
-		String parentWindow = driver.getWindowHandle();
-		for (String childwindow: driver.getWindowHandles()) 
-			 {
-				driver.switchTo().window(childwindow);
-			 }
-				String text = driver.findElement(By.xpath("//div[@class='notification-header']")).getText();
-				System.out.println(text);
-			 	driver.close(); // closing child window
-				driver.switchTo().window(parentWindow);
-			
+		/*
+		 * String parentWindow = driver.getWindowHandle(); for (String childwindow:
+		 * driver.getWindowHandles()) { driver.switchTo().window(childwindow); } String
+		 * text =
+		 * driver.findElement(By.xpath("//div[@class='notification-header']")).getText()
+		 * ; System.out.println(text); driver.close(); // closing child window
+		 * driver.switchTo().window(parentWindow);
+		 */
+		Actions act= new Actions(driver);
+		WebDriverWait wait= new WebDriverWait(driver,50);	
+		WebElement menu = driver.findElement(By.id("menuDropdownImg"));
+		WebElement close = driver.findElement(By.xpath("//*[@id=\"megaMenuClose\"]/button"));
+		
+		act.moveToElement(menu).build().perform();
+		wait.until(ExpectedConditions.elementToBeClickable(close));
+		close.click();
+		
 		
 		Thread.sleep(4000);
 		driver.close();

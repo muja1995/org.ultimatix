@@ -9,12 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">23,305</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">2</td><td class="num">13,027</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Ultimatix_Def.Ultimatix_Def</td><td><a href="#m0">dash_board_is_displayed</a></td><td rowspan="1">1558074508784</td><td rowspan="1">18</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Ultimatix_Def.Ultimatix_Def</td><td><a href="#m1">sign_on_is_clicked</a></td><td rowspan="1">1558074508808</td><td rowspan="1">6002</td></tr><tr class="passedeven"><td><a href="#m2">the_URL_is_launched</a></td><td rowspan="1">1558074514814</td><td rowspan="1">7232</td></tr><tr class="passedeven"><td><a href="#m3">the_UserID_and_PWD_are_entered</a></td><td rowspan="1">1558074522056</td><td rowspan="1">9977</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">Ultimatix_Def.Ultimatix_Def</td><td><a href="#m0">dash_board_is_displayed</a></td><td rowspan="1">1558516672465</td><td rowspan="1">23</td></tr><tr class="failedeven"><td><a href="#m1">sign_on_is_clicked</a></td><td rowspan="1">1558516672511</td><td rowspan="1">11</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Ultimatix_Def.Ultimatix_Def</td><td><a href="#m2">the_URL_is_launched</a></td><td rowspan="1">1558516672535</td><td rowspan="1">12373</td></tr><tr class="passedeven"><td><a href="#m3">the_UserID_and_PWD_are_entered</a></td><td rowspan="1">1558516684916</td><td rowspan="1">520</td></tr></tbody>
 </table>
 <h2>Default test</h2><h3 id="m0">Ultimatix_Def.Ultimatix_Def#dash_board_is_displayed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at Ultimatix_Def.Ultimatix_Def.dash_board_is_displayed(Ultimatix_Def.java:56)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:44)
+	at Ultimatix_Def.Ultimatix_Def.dash_board_is_displayed(Ultimatix_Def.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -41,7 +42,34 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Ultimatix_Def.Ultimatix_Def#sign_on_is_clicked</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Ultimatix_Def.Ultimatix_Def#sign_on_is_clicked</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at Ultimatix_Def.Ultimatix_Def.sign_on_is_clicked(Ultimatix_Def.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">Ultimatix_Def.Ultimatix_Def#the_URL_is_launched</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">Ultimatix_Def.Ultimatix_Def#the_UserID_and_PWD_are_entered</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
