@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Ultimatix_Def.Ultimatix_Def">
+      <class name="org.seleniumhq.selenium.org.ultimatix.Date_Dropdown">
         <methods>
-          <include name="dash_board_is_displayed"/>
+          <include name="Date_Change"/>
         </methods>
-      </class> <!-- Ultimatix_Def.Ultimatix_Def -->
+      </class> <!-- org.seleniumhq.selenium.org.ultimatix.Date_Dropdown -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
